@@ -1,21 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
 <router-outlet></router-outlet>
+ <h3> Normal Interpolation without using Pipes</h3> 
+<h4>{{title}}</h4>
+<p>{{intro}} by {{trainer}}<p> on {{date}}
+
+  <br>--------------------------------------------------------<br>
+  <h3> Interpolation using String Pipes</h3> 
+  <h3>{{title | uppercase}}</h3>
+  <p>{{intro | titlecase}} by {{trainer | lowercase}}<p> on {{date}}
+
+ <br> --------------------------------------------------------<br>
+ <h3>Date Pipes</h3>
+ Today is {{date}} <br>
+ In Long Format <b>{{date | date:'long'}}</b> <br>
+ In Short Format <b>{{date | date:'short'}} </b><br>
+ In Medium Format <b>{{date | date:'medium'}}</b> <br>
+ In Short Date Format <b>{{date | date:'shortDate'}} </b><br>
+ In Medium Date Format <b>{{date | date:'mediumDate'}}</b> <br>
+ In Long Date Format <b>{{date | date:'longDate'}}</b> <br>
+ In Short Time Format <b>{{date | date:'shortTime'}}</b> <br>
+ In Medium Time Format <b>{{date | date:'mediumTime'}}</b> <br>
+ In Long Time Format <b>{{date | date:'longTime'}} </b><br>
+
+ <h3>Percentage Pipe</h3>
+ Percentage is {{percent | percent}}
+
+ <h3>Currency Pipe</h3>
+ Amount is {{amount | currency:'INR':false}}<br>
+ Amount is {{amount | currency:'INR':true}}<br>
+
+ <h3>Number Pipes</h3>
+ The original Number is {{num}}<br>
+ The number after passing through a pipe 3.4-6 is {{num | number:'3.4-6'}}<br>
+
+ <h3>Slice Pipe</h3>
+ Original Array <b>{{months}}</b><br>
+ Sliced Array <b>{{months | slice : 3:7}}</b><br>
+
+
